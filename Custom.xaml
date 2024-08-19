@@ -524,10 +524,10 @@
                         </TextBlock>
                         <local:MyIconTextButton ColorType="Highlight"
                                                 Margin="4,-2,4,0"
-                                                Text="Unknown"
+                                                Text="39c26042de55b0f97a6a52fb32ea91e193e3f7e8"
                                                 ToolTip="当前 Commit 版本"
-                                                
-                                                EventData="https://github.com/HomePlaza-Of-PCL2/Homepage-Market/commit/Unknown"
+                                                EventType="打开网页"
+                                                EventData="https://github.com/HomePlaza-Of-PCL2/Homepage-Market/commit/39c26042de55b0f97a6a52fb32ea91e193e3f7e8"
                                                 LogoScale="1.1"
                                                 Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
                     </StackPanel>
