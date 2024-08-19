@@ -87,6 +87,9 @@ export class Generator {
             case "Text":
                 template = this.xaml_template.markdown.Text;
                 break;
+            case "XAML":
+                template = "%s";
+                break;
             case "Icons":
                 template = this.xaml_template.styles.Icons;
                 break;

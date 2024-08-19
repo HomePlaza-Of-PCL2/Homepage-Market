@@ -67,7 +67,7 @@ const main = async () => {
             Contents.push(content);
         }
         // <gen> 1.ii.b
-        const maincard = await (await new Generator().initalize()).generateXaml("Apage", header.TITLE, Contents.length === 1 ? Contents[0] : Contents.join("\r\n"), BtnRepo, BtnIssue, BtnCopy, BtnLoad, header.AUTHOR);
+        const maincard = await (await new Generator().initalize()).generateXaml("Apage", header.TITLE, Contents.length === 1 ? Contents[0] : Contents.join(""), BtnRepo, BtnIssue, BtnCopy, BtnLoad, header.AUTHOR);
         MainCards.push(maincard);
     }
     // <end> 1.ii.b

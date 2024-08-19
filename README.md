@@ -16,6 +16,7 @@
 
 - 有需要的话，你可以直接联系作者 JingHai-Lingyun（QQ 1913532130）或者 MFn233（QQ 2167647514）。但也请不要恶意骚扰，谢谢
 - 如果你有改进方法，欢迎提 Issue 或发送 Pull Request。
+- 提交的 Pull Request 请遵循 [Homepage-Market PR 规范](./PR.md)。
 
 ---
 

@@ -34,6 +34,7 @@ jobs:
           cd project
           node JMBuilder.js
       # <step> 提交
+      # <depr> GPG Sign 导致提交信息创建时间过长，暂时禁用，后期看看怎么处理
       # - name: 配置 GPG 信息
       #   uses: crazy-max/ghaction-import-gpg@v6
       #   with:
@@ -50,7 +51,7 @@ jobs:
           git config --global user.email "torchsky@163.com"
           git remote add target-repo https://TorchSky:${{ secrets.PAT }}@github.com/HomePlaza-Of-PCL2/Homepage-Market.git
           git add Custom.xaml
-          git commit -m "upload generated pages" 
+          git commit -m "[Bot] Generate Homepage File." 
           echo commitdone
           git push target-repo main
           echo pushdone

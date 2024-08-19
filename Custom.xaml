@@ -272,9 +272,7 @@
         <FlowDocumentScrollViewer Margin="0,-5,0,0">
             <FlowDocument>
                 <Paragraph Style="{StaticResource H1}">Ad_closeNN 的 PCL2 主页</Paragraph>
-
 <Paragraph>据本人所描述，是用来练习 xaml，增进 xaml 使用技巧的主页（原话：装*用的）</Paragraph>
-
 <Paragraph>代码借鉴了 Light Beacon，MFn233，SYBass</Paragraph>
 
             </FlowDocument>
@@ -336,7 +334,6 @@
         <FlowDocumentScrollViewer Margin="0,-5,0,0">
             <FlowDocument>
                 <Paragraph Style="{StaticResource H1}">炽翎主页</Paragraph>
-
 <Paragraph>一个简洁又不失优雅的PCL2主页</Paragraph>
 
             </FlowDocument>
@@ -395,7 +392,6 @@
         <FlowDocumentScrollViewer Margin="0,-5,0,0">
             <FlowDocument>
                 <Paragraph Style="{StaticResource H1}">SYC</Paragraph>
-
 <Paragraph>无法描述具体内容（杠掉）</Paragraph>
 
             </FlowDocument>
@@ -454,9 +450,7 @@
         <FlowDocumentScrollViewer Margin="0,-5,0,0">
             <FlowDocument>
                 <Paragraph Style="{StaticResource H1}">Magic Box PCL Mainpage</Paragraph>
-
 <Paragraph>FSC 制作的第一个 PCL 主页， 偶尔看到自定义主页之后做的。</Paragraph>
-
 <Paragraph>感谢 Github@MFn233</Paragraph>
 
             </FlowDocument>
@@ -497,6 +491,57 @@
                 <TextBlock HorizontalAlignment="Right"
                            Grid.Column="1"
                            Text="FSC"
+                           FontSize="14"
+                           VerticalAlignment="Center"
+                           Foreground="{DynamicResource ColorBrush4}" />
+            </WrapPanel>
+        </Grid>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Title="SoftOSDev 的主页"
+              CanSwap="True"
+              IsSwaped="True"
+              Style="{StaticResource Card}">
+    <StackPanel Style="{StaticResource ContentStack}">
+        <FlowDocumentScrollViewer Margin="0,-5,0,0">
+            <FlowDocument>
+                <Paragraph Style="{StaticResource H1}">SoftOSDev 的主页</Paragraph>
+<local:MyHint IsWarn="False" Text="这个主页很神奇，什么描述也没有……"  />
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <WrapPanel Margin="-2,2"
+                       Grid.Column="0"
+                       Orientation="Horizontal"
+                       VerticalAlignment="Center">
+            
+            
+            <local:MyIconTextButton Style="{StaticResource ClipboardButton}"
+                        LogoScale="0.85"
+                        Logo="{StaticResource ClipboardIcon}"
+                        EventData="https://huaxihao.eu.org/desk/" />
+            
+            </WrapPanel>
+            <WrapPanel Margin="-2,2,0,2"
+                       Grid.Column="2"
+                       Orientation="Horizontal"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center">
+                <Path Grid.Column="0"
+                      Margin="8,0"
+                      Width="18"
+                      Height="18"
+                      Fill="{DynamicResource ColorBrush4}"
+                      Stretch="Uniform"
+                      Data="M853.333333 375.466667C947.2 238.933333 964.266667 51.2 964.266667 42.666667c0-17.066667-8.533333-25.6-25.6-34.133334-17.066667-8.533333-34.133333-8.533333-51.2 0-34.133333 17.066667-332.8 179.2-392.533334 273.066667-85.333333 128-315.733333 477.866667-315.733333 486.4v8.533333L51.2 955.733333c-8.533333 17.066667-8.533333 42.666667 17.066667 51.2 8.533333 0 17.066667 8.533333 25.6 8.533334 17.066667 0 34.133333-8.533333 42.666666-17.066667L256 810.666667c76.8-51.2 503.466667-298.666667 597.333333-435.2zM938.666667 896H307.2c-25.6 0-42.666667 25.6-42.666667 68.266667s17.066667 59.733333 42.666667 59.733333H938.666667c25.6 0 42.666667-25.6 42.666666-68.266667s-17.066667-59.733333-42.666666-59.733333z" />
+                <TextBlock HorizontalAlignment="Right"
+                           Grid.Column="1"
+                           Text="SoftOSDev"
                            FontSize="14"
                            VerticalAlignment="Center"
                            Foreground="{DynamicResource ColorBrush4}" />
