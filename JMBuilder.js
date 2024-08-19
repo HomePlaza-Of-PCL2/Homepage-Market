@@ -72,8 +72,9 @@ const main = async () => {
     }
     // <end> 1.ii.b
     // <begin> 1.iii
+    const hash = process.env.GITHUB_SHA || "Unknown";
     console.log("(1.iii): 开始生成 Footer");
-    const Footer = await (await new Generator().initalize()).generateXaml("Footer", "this_is_a_hash", "this_is_a_hash");
+    const Footer = await (await new Generator().initalize()).generateXaml("Footer", hash, hash === "Unknown" ? "" : `EventType="打开网页"`, `https://github.com/HomePlaza-Of-PCL2/Homepage-Market/commit/${hash}`);
     // <end> 1.iii
     // <begin> 1
     console.log("(1): 开始生成完整主页");
