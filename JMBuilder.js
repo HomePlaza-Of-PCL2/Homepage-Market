@@ -73,8 +73,19 @@ const main = async () => {
     // <end> 1.ii.b
     // <begin> 1.iii
     const hash = process.env.HASH || "Unknown";
+    const result = [];
+    if (hash === "Unknown") {
+        result.push("Unknown");
+        result.push("弹出窗口");
+        result.push("提示|未获取到提交哈希\\n如果你是普通用户，请向主页作者报告此问题");
+    }
+    else {
+        result.push(hash);
+        result.push("打开网页");
+        result.push(`https://github.com/HomePlaza-Of-PCL2/Homepage-Market/commit/${hash}`);
+    }
     console.log("(1.iii): 开始生成 Footer");
-    const Footer = await (await new Generator().initalize()).generateXaml("Footer", hash === "Unknown" ? hash : hash.slice(0, 7), hash === "Unknown" ? "" : `EventType="打开网页"`, `https://github.com/HomePlaza-Of-PCL2/Homepage-Market/commit/${hash}`);
+    const Footer = await (await new Generator().initalize()).generateXaml("Footer", result[0], result[1], result[2]);
     // <end> 1.iii
     // <begin> 1
     console.log("(1): 开始生成完整主页");
