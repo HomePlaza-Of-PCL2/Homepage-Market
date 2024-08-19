@@ -84,11 +84,9 @@ export class Generator {
             case "H6":
                 template = this.xaml_template.markdown.H6;
                 break;
+            case "XAML":
             case "Text":
                 template = this.xaml_template.markdown.Text;
-                break;
-            case "XAML":
-                template = "%s";
                 break;
             case "Icons":
                 template = this.xaml_template.styles.Icons;

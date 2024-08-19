@@ -506,7 +506,8 @@
         <FlowDocumentScrollViewer Margin="0,-5,0,0">
             <FlowDocument>
                 <Paragraph Style="{StaticResource H1}">SoftOSDev 的主页</Paragraph>
-<local:MyHint IsWarn="False" Text="这个主页很神奇，什么描述也没有……"  />
+<Paragraph><local:MyHint IsWarn="False" Text="这个主页很神奇，什么描述也没有……"  /></Paragraph>
+
             </FlowDocument>
         </FlowDocumentScrollViewer>
         <Grid>

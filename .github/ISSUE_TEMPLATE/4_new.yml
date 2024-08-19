@@ -3,14 +3,14 @@ description: "投稿自己的主页"
 labels: ["a:新主页"]
 body:
   - type: textarea
-    id: "disc"
+    id: "name"
     attributes:
       label: 主页名称
       description: "你主页的名字"
     validations:
       required: true
   - type: textarea
-    id: "disc"
+    id: "uri"
     attributes:
       label: 主页地址
       description: |
@@ -18,6 +18,14 @@ body:
         "除此之外，你还可以提供 Git 仓库，Bug 反馈和直接加载主页（JSON 文件部署地址）"
     validations:
       required: true
+  - type: textarea
+    id: "desp"
+    attributes:
+      label: 简介
+      description: "你主页的简介"
+      placeholder: "如果还没想好可以空着不写，到时候来补充"
+    validations:
+      required: false
   - type: textarea
     id: "files"
     attributes:
