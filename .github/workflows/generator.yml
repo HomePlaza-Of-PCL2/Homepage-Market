@@ -34,10 +34,6 @@ jobs:
           cd project
           node JMBuilder.js
       # <step> 提交
-      - name: 设置 Git
-        run: |
-          git config --global user.name "TorchSky"
-          git config --global user.email "torchsky@163.com"
       - name: 配置 GPG 信息
         uses: crazy-max/ghaction-import-gpg@v6
         with:
@@ -45,11 +41,10 @@ jobs:
           git_user_signingkey: true
           git_commit_gpgsign: true
           workdir: project
-      - name: 提交
+      - name: 提交与推送更改
         run: |
           cd project
-          git init
-          git remote add origin https://github.com/HomePlaza-Of-PCL2/Homepage-Market.git
-          git add .
-          git commit -m "Generate Pages"
-          git push origin main
+          git config --global user.name "TorchSky"
+          git config --global user.email "torchsky@163.com"
+          git add *
+          git diff-index --quiet HEAD || git commit -S -m "upload generated pages" && git push
