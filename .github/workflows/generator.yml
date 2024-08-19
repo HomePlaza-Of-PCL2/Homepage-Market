@@ -7,7 +7,7 @@ on:
 
 jobs:
   generate:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       # <step> 初始化
       - name: 签出工程储存库
@@ -21,7 +21,7 @@ jobs:
       # <step> 目录确认
       - name: 确认目录
         run: |
-          ls -l
+          dir /b
       # 没有依赖需要安装 :D
       # <step> 构建
       - name: 清理旧生成
