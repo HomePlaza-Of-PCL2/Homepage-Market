@@ -27,6 +27,6 @@ MFn 的频道：[中国] https://kook.vip/ZlWh2d | MFn's Channel [International]
 
 贡献者：
 
-![Contributors](https://contrib.rocks/image?repo=MFn233/PCL-Mainpage-Market)
+![Contributors](https://contrib.rocks/image?repo=HomePlaza-Of-PCL2/Homepage-Market)
 
 ~~Bus factor : 2~~
