@@ -1,6 +1,6 @@
-name: "新主页"
-description: "投稿自己的主页"
-labels: ["新主页"]
+name: "优化"
+description: "改进现有功能"
+labels: ["a:建议"]
 body:
   - type: textarea
     id: "disc"

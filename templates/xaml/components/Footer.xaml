@@ -51,8 +51,8 @@
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Right">
                     <local:MyIconTextButton HorizontalAlignment="Left"
-                                            Text="反馈"
                                             ToolTip="反馈主页广场问题"
+                                            Text="反馈"
                                             EventType="打开网页"
                                             EventData="https://github.com/HomePlaza-Of-PCL2/Homepage-Market/issues/new/choose"
                                             LogoScale="1"

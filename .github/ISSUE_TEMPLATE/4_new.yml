@@ -1,0 +1,26 @@
+name: "新主页"
+description: "投稿自己的主页"
+labels: ["a:新主页"]
+body:
+  - type: textarea
+    id: "disc"
+    attributes:
+      label: 主页名称
+      description: "你主页的名字"
+    validations:
+      required: true
+  - type: textarea
+    id: "disc"
+    attributes:
+      label: 主页地址
+      description: |
+        "你至少需要提供 XAML 文件的部署地址"
+        "除此之外，你还可以提供 Git 仓库，Bug 反馈和直接加载主页（JSON 文件部署地址）"
+    validations:
+      required: true
+  - type: textarea
+    id: "files"
+    attributes:
+      label: "[可选]附件"
+      description: "上传附件"
+      placeholder: "将文件直接拖至这里上传。"

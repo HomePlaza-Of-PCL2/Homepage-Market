@@ -1,6 +1,6 @@
 name: "Bug"
 description: "报错啦报错啦"
-labels: ["Bug"]
+labels: ["a:Bug"]
 body:
   - type: textarea
     id: "disc"
