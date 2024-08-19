@@ -43,7 +43,7 @@ jobs:
           workdir: project
       - name: 提交与推送更改
         env:
-          PAT: ${{ secrets.X_BOT_PAT }}
+          PAT: ${{ secrets.X_BOT_TOKEN }}
         run: |
           cd project
           git config --global user.name "TorchSky"
