@@ -1,0 +1,11 @@
+{
+    "name": "pcl2hpm",
+    "version": "1.0.0",
+    "description": "PCL2 homepage Market",
+    "type": "module",
+    "scripts": {
+        "gen": "node JMBuilder.js"
+    },
+    "author": "LingyunAwA",
+    "license": "GPL-3.0-only"
+}
