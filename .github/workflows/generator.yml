@@ -27,9 +27,12 @@ jobs:
       # <step> 构建
       - name: 清理旧生成
         run: |
+          cd project
           del ./Custom.xaml
       - name: 运行生成器
-        run: node JMBuilder.js
+        run: |
+          cd project
+          node JMBuilder.js
       # <step> 提交
       - name: 设置 Git
         run: |
@@ -39,6 +42,9 @@ jobs:
         env:
           PAT: ${{ secrets.X-Bot-Token }}
         run: |
+          cd project
+          git init
           git remote add target-repo https://TorchSky:${{ secrets.PAT }}@github.com/HomePlaza-Of-PCL2/Homepage-Market.git
           git add .
+          git commit -m "Generate Pages"
           git push target-repo main
