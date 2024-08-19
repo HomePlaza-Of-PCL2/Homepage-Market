@@ -49,6 +49,6 @@ jobs:
           git config --global user.name "TorchSky"
           git config --global user.email "torchsky@163.com"
           git remote add target-repo https://github.com/HomePlaza-Of-PCL2/Homepage-Market.git
-          git add .
+          git add Custom.xaml
           git commit -m "upload generated pages" 
           git push target-repo main
