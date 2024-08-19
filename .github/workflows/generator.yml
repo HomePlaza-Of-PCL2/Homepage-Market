@@ -46,10 +46,15 @@ jobs:
           PAT: ${{ secrets.X_BOT_TOKEN }}
         run: |
           cd project
-          dir 
           git config --global user.name "TorchSky"
+          echo configusernamedone
           git config --global user.email "torchsky@163.com"
+          echo configuseremaildone
           git remote add target-repo https://TorchSky:${{ secrets.PAT }}@github.com/HomePlaza-Of-PCL2/Homepage-Market.git
+          echo addremotedone
           git add Custom.xaml
+          echo addfiledone
           git commit -m "upload generated pages" 
+          echo commitdone
           git push target-repo main
+          echo pushdone
