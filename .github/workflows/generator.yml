@@ -34,13 +34,13 @@ jobs:
           cd project
           node JMBuilder.js
       # <step> 提交
-      - name: 配置 GPG 信息
-        uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.X_BOT_GPGS }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
-          workdir: project
+      # - name: 配置 GPG 信息
+      #   uses: crazy-max/ghaction-import-gpg@v6
+      #   with:
+      #     gpg_private_key: ${{ secrets.X_BOT_GPGS }}
+      #     git_user_signingkey: true
+      #     git_commit_gpgsign: true
+      #     workdir: project
       - name: 提交与推送更改
         env:
           PAT: ${{ secrets.X_BOT_TOKEN }}
