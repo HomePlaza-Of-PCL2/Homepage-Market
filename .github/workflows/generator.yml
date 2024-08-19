@@ -42,12 +42,12 @@ jobs:
           git_commit_gpgsign: true
           workdir: project
       - name: 提交与推送更改
-        env:
-          PAT: ${{ secrets.X_BOT_TOKEN }}
+        # env:
+          # PAT: ${{ secrets.X_BOT_TOKEN }}
         run: |
           cd project
           git config --global user.name "TorchSky"
           git config --global user.email "torchsky@163.com"
-          git remote add target-repo https://TorchSky:${{ secrets.PAT }}@github.com/HomePlaza-Of-PCL2/Homepage-Market.git
+          git remote add target-repo https://github.com/HomePlaza-Of-PCL2/Homepage-Market.git
           git add *
           git diff-index --quiet HEAD || git commit -S -m "upload generated pages" && git push target-repo main
