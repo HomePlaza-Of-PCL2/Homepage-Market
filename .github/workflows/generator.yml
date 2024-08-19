@@ -21,12 +21,13 @@ jobs:
       # <step> 目录确认
       - name: 确认目录
         run: |
+          cd project
           dir
       # 没有依赖需要安装 :D
       # <step> 构建
       - name: 清理旧生成
         run: |
-          rm -rf ./Custom.xaml
+          del ./Custom.xaml
       - name: 运行生成器
         run: node JMBuilder.js
       # <step> 提交
