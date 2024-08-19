@@ -1,0 +1,165 @@
+<Style TargetType="FlowDocumentScrollViewer">
+    <Setter Property="IsSelectionEnabled"
+            Value="False" />
+    <Setter Property="VerticalScrollBarVisibility"
+            Value="Hidden" />
+    <Setter Property="Margin"
+            Value="0" />
+</Style>
+<Style TargetType="FlowDocument">
+    <Setter Property="FontFamily"
+            Value="Microsoft YaHei UI" />
+    <Setter Property="FontSize"
+            Value="14" />
+    <Setter Property="TextAlignment"
+            Value="Left" />
+</Style>
+<Style TargetType="StackPanel"
+       x:Key="ContentStack">
+    <Setter Property="Margin"
+            Value="20,40,20,20" />
+</Style>
+<Style TargetType="local:MyCard"
+       x:Key="Card">
+    <Setter Property="Margin"
+            Value="0,5" />
+</Style>
+<Style TargetType="TextBox"
+       x:Key="InlineCode">
+    <Setter Property="FontSize"
+            Value="14" />
+    <Setter Property="IsReadOnly"
+            Value="True" />
+    <Setter Property="Margin"
+            Value="2,0,2,-4" />
+    <Setter Property="FontFamily"
+            Value="Consolas" />
+    <Setter Property="Height"
+            Value="18" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush6}"
+                        Opacity="0.9"
+                        BorderBrush="{DynamicResource ColorBrush4}"
+                        BorderThickness="0"
+                        CornerRadius="5"
+                        Padding="4,0.2">
+                    <ScrollViewer x:Name="PART_ContentHost"
+                                  Focusable="false"
+                                  HorizontalScrollBarVisibility="Hidden"
+                                  VerticalScrollBarVisibility="Hidden" />
+                </Border>
+                <ControlTemplate.Triggers></ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style TargetType="Image"
+       x:Key="InnerImage">
+    <Setter Property="MaxHeight"
+            Value="500" />
+    <Setter Property="HorizontalAlignment"
+            Value="Center" />
+</Style>
+<Style TargetType="TextBlock">
+    <Setter Property="TextWrapping"
+            Value="Wrap" />
+    <Setter Property="HorizontalAlignment"
+            Value="Left" />
+    <Setter Property="FontSize"
+            Value="14" />
+    <Setter Property="Foreground"
+            Value="Black" />
+</Style>
+<Style TargetType="List">
+    <Setter Property="Foreground"
+            Value="{DynamicResource ColorBrush3}" />
+    <Setter Property="Margin"
+            Value="20,0,0,0" />
+    <Setter Property="MarkerStyle"
+            Value="1" />
+    <Setter Property="Padding"
+            Value="0" />
+</Style>
+<Style TargetType="ListItem">
+    <Setter Property="Foreground"
+            Value="Black" />
+    <Setter Property="LineHeight"
+            Value="22" />
+</Style>
+<Style TargetType="Paragraph"
+       x:Key="H1">
+    <Setter Property="FontSize"
+            Value="24" />
+    <Setter Property="Margin"
+            Value="0,10,0,10" />
+    <Setter Property="FontWeight"
+            Value="Bold" />
+    <Setter Property="Foreground"
+            Value="{DynamicResource ColorBrush3}" />
+</Style>
+<Style TargetType="Paragraph"
+       x:Key="H2">
+    <Setter Property="FontSize"
+            Value="22" />
+    <Setter Property="Margin"
+            Value="0,10,0,5" />
+    <Setter Property="FontWeight"
+            Value="Bold" />
+    <Setter Property="Foreground"
+            Value="{DynamicResource ColorBrush3}" />
+</Style>
+<Style TargetType="Paragraph"
+       x:Key="H3">
+    <Setter Property="FontSize"
+            Value="18" />
+    <Setter Property="Margin"
+            Value="0,5,0,5" />
+    <Setter Property="FontWeight"
+            Value="Bold" />
+    <Setter Property="Foreground"
+            Value="{DynamicResource ColorBrush4}" />
+</Style>
+<Style TargetType="Paragraph"
+       x:Key="H4">
+    <Setter Property="FontSize"
+            Value="16" />
+    <Setter Property="Margin"
+            Value="0,3,0,5" />
+    <Setter Property="FontWeight"
+            Value="Bold" />
+    <Setter Property="Foreground"
+            Value="{DynamicResource ColorBrush4}" />
+</Style>
+<Style TargetType="Paragraph"
+       x:Key="H5">
+    <Setter Property="FontSize"
+            Value="15" />
+    <Setter Property="Margin"
+            Value="0,3,0,5" />
+    <Setter Property="Foreground"
+            Value="{DynamicResource ColorBrush4}" />
+</Style>
+<Style TargetType="Border"
+       x:Key="Quote">
+    <Setter Property="BorderThickness"
+            Value="5,0,0,0" />
+    <Setter Property="BorderBrush"
+            Value="{DynamicResource ColorBrush4}" />
+    <Setter Property="Padding"
+            Value="10,5" />
+    <Setter Property="Margin"
+            Value="0,5" />
+</Style>
+<Style x:Key="imgTitle"
+       TargetType="TextBlock">
+    <Setter Property="FontSize"
+            Value="14" />
+    <Setter Property="Foreground"
+            Value="#FF777777" />
+    <Setter Property="HorizontalAlignment"
+            Value="Center" />
+    <Setter Property="Margin"
+            Value="0,0,0,15" />
+</Style>

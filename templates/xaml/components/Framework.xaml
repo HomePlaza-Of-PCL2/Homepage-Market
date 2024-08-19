@@ -1,0 +1,12 @@
+%s
+
+<StackPanel Margin="0,-10,0,0"
+            Opacity="{Binding Path=Value,ElementName=OpacitySlider}"
+            xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <StackPanel.Resources>
+    %s
+    </StackPanel.Resources>
+    %s
+</StackPanel>
+
+%s

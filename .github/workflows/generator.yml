@@ -1,0 +1,39 @@
+name: Generate Pages
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: Linux
+    steps:
+      # <step> 初始化
+      - name: 签出工程储存库
+        uses: actions/checkout@v4
+        with:
+          path: "project"
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # 没有依赖需要安装 :D
+      # <step> 构建
+      - name: 清理旧生成
+        run: |
+          rm -rf ./Custom.xaml
+      - name: 运行生成器
+        run: node JMBuilder.js
+      # <step> 提交
+      - name: 设置 Git
+        run: |
+          git config --global user.name "TorchSky"
+          git config --global user.email "torchsky@163.com"
+      - name: 提交
+        env:
+          PAT: ${{ secrets.X-Bot-Token }}
+        run: |
+          git remote add target-repo https://TorchSky:${{ secrets.PAT }}@github.com/HomePlaza-Of-PCL2/Homepage-Market.git
+          git add .
+          git push target-repo main

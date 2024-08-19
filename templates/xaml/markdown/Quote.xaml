@@ -1,0 +1,5 @@
+<BlockUIContainer>
+    <Border Style="{StaticResource Quote}">
+        <TextBlock>%s</TextBlock>
+    </Border>
+</BlockUIContainer>

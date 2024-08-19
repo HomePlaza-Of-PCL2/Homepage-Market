@@ -1,0 +1,36 @@
+<Style TargetType="local:MyIconTextButton"
+       x:Key="GithubRepoButton">
+    <Setter Property="Text"
+            Value="项目仓库" />
+    <Setter Property="ToolTip"
+            Value="打开项目 Git 源仓库" />
+    <Setter Property="EventType"
+            Value="打开网页" />
+</Style>
+<Style TargetType="local:MyIconTextButton"
+       x:Key="IssueButton">
+    <Setter Property="Text"
+            Value="报告问题" />
+    <Setter Property="ToolTip"
+            Value="向作者反馈问题" />
+    <Setter Property="EventType"
+            Value="打开网页" />
+</Style>
+<Style TargetType="local:MyIconTextButton"
+       x:Key="ClipboardButton">
+    <Setter Property="Text"
+            Value="复制直链" />
+    <Setter Property="ToolTip"
+            Value="复制主页的联网加载链接" />
+    <Setter Property="EventType"
+            Value="复制文本" />
+</Style>
+<Style TargetType="local:MyIconTextButton"
+       x:Key="LoadingButton">
+    <Setter Property="Text"
+            Value="打开主页" />
+    <Setter Property="ToolTip"
+            Value="直接加载主页内容并进入" />
+    <Setter Property="EventType"
+            Value="打开帮助" />
+</Style>

@@ -1,0 +1,55 @@
+<Border BorderBrush="{DynamicResource ColorBrush3}"
+        BorderThickness="3"
+        CornerRadius="8"
+        Margin="0,0,0,20">
+    <Border.Background>
+        <LinearGradientBrush StartPoint="0.5,0"
+                             EndPoint="0.5,1">
+            <GradientStop Color="LightSkyBlue"
+                          Offset="0.0" />
+            <GradientStop Color="LightBlue"
+                          Offset="0.5" />
+            <GradientStop Color="LightSteelBlue"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </Border.Background>
+    <StackPanel Margin="0,40,0,0">
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="欢迎使用 PCL 主页广场"
+                       FontSize="37"
+                       Margin="0,-5,0,20"
+                       FontWeight="Bold"
+                       Foreground="#ffffff">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="#fff"
+                                      Direction="320"
+                                      ShadowDepth="0"
+                                      BlurRadius="15"
+                                      Opacity="0.5" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="这里是所有人的 PCL2 主页实验室！"
+                       FontSize="16"
+                       Margin="0,-5,0,20"
+                       FontWeight="Bold"
+                       Foreground="#ffffff">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="#fff"
+                                      Direction="320"
+                                      ShadowDepth="0"
+                                      BlurRadius="15"
+                                      Opacity="0.5" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,0">
+            <Image Height="40"
+                   Source="http://image.hhhhhy.kim/45/81.png" />
+        </StackPanel>
+    </StackPanel>
+</Border>

@@ -1,0 +1,5 @@
+# Ignore log output
+log.log
+
+# Editor config
+.vscode/

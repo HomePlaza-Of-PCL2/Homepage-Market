@@ -1,0 +1,50 @@
+<local:MyCard Title="%s"
+              CanSwap="True"
+              IsSwaped="True"
+              Style="{StaticResource Card}">
+    <StackPanel Style="{StaticResource ContentStack}">
+        <FlowDocumentScrollViewer Margin="0,-5,0,0">
+            <FlowDocument>
+                %s
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <WrapPanel Margin="-2,2"
+                       Grid.Column="0"
+                       Orientation="Horizontal"
+                       VerticalAlignment="Center">
+            %s
+            %s
+            %s
+            %s
+            </WrapPanel>
+            <Grid VerticalAlignment="Center"
+                  Margin="6,10,0,0"
+                  Grid.Column="2"
+                  HorizontalAlignment="Right">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="45" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Path Grid.Column="0"
+                      Margin="4,0"
+                      Width="18"
+                      Height="18"
+                      Fill="{DynamicResource ColorBrush4}"
+                      Stretch="Uniform"
+                      Data="M853.333333 375.466667C947.2 238.933333 964.266667 51.2 964.266667 42.666667c0-17.066667-8.533333-25.6-25.6-34.133334-17.066667-8.533333-34.133333-8.533333-51.2 0-34.133333 17.066667-332.8 179.2-392.533334 273.066667-85.333333 128-315.733333 477.866667-315.733333 486.4v8.533333L51.2 955.733333c-8.533333 17.066667-8.533333 42.666667 17.066667 51.2 8.533333 0 17.066667 8.533333 25.6 8.533334 17.066667 0 34.133333-8.533333 42.666666-17.066667L256 810.666667c76.8-51.2 503.466667-298.666667 597.333333-435.2zM938.666667 896H307.2c-25.6 0-42.666667 25.6-42.666667 68.266667s17.066667 59.733333 42.666667 59.733333H938.666667c25.6 0 42.666667-25.6 42.666666-68.266667s-17.066667-59.733333-42.666666-59.733333z" />
+                <TextBlock HorizontalAlignment="Right"
+                           Grid.Column="1"
+                           Text="%s"
+                           FontSize="14"
+                           VerticalAlignment="Center"
+                           Foreground="{DynamicResource ColorBrush4}" />
+            </Grid>
+        </Grid>
+    </StackPanel>
+</local:MyCard>
