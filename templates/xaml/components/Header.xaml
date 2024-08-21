@@ -14,7 +14,7 @@
     <StackPanel Margin="0,40,0,0"> 
         <StackPanel HorizontalAlignment="Center">
             <TextBlock Text="欢迎来到 PCL 主页广场"
-                       FontSize="40"
+                       FontSize="38"
                        Margin="0,-5,0,20"
                        FontWeight="Bold"
                        Foreground="#ffffff">
@@ -28,7 +28,7 @@
             </TextBlock>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center">
-            <TextBlock Text="这里是所有人的 PCL2 主页实验室！"
+            <TextBlock Text="这里是所有人的 PCL 主页实验室！"
                        FontSize="14"
                        Margin="0,-5,0,20"
                        FontWeight="Bold"
