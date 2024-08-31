@@ -2,6 +2,7 @@ import { Generator } from "./core/Generator.js";
 import { Analyzer } from "./core/Analyzer.js";
 import { FileIO } from "./core/FileIO.js";
 import { getFilesWithExtension } from "./core/Utils.js";
+import { randomInt } from "crypto";
 const main = async () => {
     console.log("\n欢迎使用 JMBuilder (PCL 主页市场构建工具)\n");
     // <begin> 1.i
@@ -72,9 +73,9 @@ const main = async () => {
     }
     // <end> 1.ii.b
     // <begin> 1.iii
-    const hash = process.env.HASH || "Unknown";
+    const hash = process.env.HASH;
     const result = [];
-    if (hash === "Unknown") {
+    if (typeof hash === "undefined") {
         result.push("Unknown");
         result.push("弹出窗口");
         result.push("提示|未获取到提交哈希\\n如果你是普通用户，请向主页作者报告此问题");
@@ -95,5 +96,9 @@ const main = async () => {
     console.log("(2): 开始写入文件");
     new FileIO("./Custom.xaml").writeFile(Main);
     // <end> 2
+    // <begin> 3
+    console.log("(3): 开始更新 INI 版本号文件");
+    await new FileIO("./Custom.xaml.ini").writeFile(hash || "No-Commit-Hash-" + randomInt(65535));
+    // <end> 3
 };
 main();
