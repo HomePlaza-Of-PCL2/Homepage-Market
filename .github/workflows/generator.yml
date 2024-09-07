@@ -50,8 +50,6 @@ jobs:
           git config --global user.name "TorchSky"
           git config --global user.email "torchsky@163.com"
           git remote add target-repo https://TorchSky:${{ secrets.PAT }}@github.com/HomePlaza-Of-PCL2/Homepage-Market.git
-          git add Custom.xaml
+          git add .
           git commit -m "[Bot] Generate Homepage File." 
-          echo commitdone
           git push target-repo main
-          echo pushdone
