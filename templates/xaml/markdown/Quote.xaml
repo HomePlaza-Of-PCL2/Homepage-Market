@@ -1,5 +1,5 @@
 <BlockUIContainer>
     <Border Style="{StaticResource Quote}">
-        <TextBlock>%s</TextBlock>
+        <TextBlock Foreground="{DynamicResource ColorBrush2}">%s</TextBlock>
     </Border>
 </BlockUIContainer>
