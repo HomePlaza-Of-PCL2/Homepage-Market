@@ -20,7 +20,7 @@
 
 ---
 
-原帖：https://github.com/Hex-Dragon/PCL2/discussions/2528#discussioncomment-8652282
+社区帖：https://github.com/Hex-Dragon/PCL2/discussions/4668
 
 V1 (Archive)：https://github.com/MFn233/PCL-Mainpage-Market
 
