@@ -4,7 +4,7 @@
 
 # 如何在主页市场上看到我的主页？
 
-- 提交 [新主页请求](https://github.com/HomePlaza-Of-PCL2/Homepage-Market/issues/new?assignees=&labels=%E6%96%B0%E4%B8%BB%E9%A1%B5&projects=&template=new.yml) 以添加你的主页。在网站第一个正式版发布之后，我们会随之载入。
+- 提交 [新主页请求](https://github.com/HomePlaza-Of-PCL2/Homepage-Market/issues/new?assignees=&labels=a%3A%E6%96%B0%E4%B8%BB%E9%A1%B5&projects=&template=4_new.yml) 以添加你的主页。在网站第一个正式版发布之后，我们会随之载入。
 
 # 我该在哪里找到主页市场的入口？
 
