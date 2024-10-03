@@ -33,6 +33,7 @@ jobs:
       - name: 清理旧生成
         run: |
           cd project
+          echo "HASH=$HASH"
           del ./Custom.xaml
       - name: 运行生成器
         run: |
