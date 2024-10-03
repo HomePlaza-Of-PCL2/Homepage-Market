@@ -24,6 +24,9 @@ jobs:
           cd project
           dir
       # 没有依赖需要安装 :D
+      # <step> 获取 Hash
+      - name: 获取哈希
+        run: echo "HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       # <step> 构建
       - name: 清理旧生成
         run: |

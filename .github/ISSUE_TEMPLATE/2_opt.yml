@@ -1,6 +1,6 @@
 name: "优化建议"
 description: "改进现有功能"
-labels: ["a:建议"]
+labels: ["· 优化"]
 body:
   - type: textarea
     id: "disc"
