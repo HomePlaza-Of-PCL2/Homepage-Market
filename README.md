@@ -4,13 +4,17 @@
 
 # 如何在主页市场上看到我的主页？
 
-- 提交 [新主页请求](https://github.com/HomePlaza-Of-PCL2/Homepage-Market/issues/new?assignees=&labels=a%3A%E6%96%B0%E4%B8%BB%E9%A1%B5&projects=&template=4_new.yml) 以添加你的主页。在网站第一个正式版发布之后，我们会随之载入。
+- 1.在你的主页中以某种形式添加本仓库的入口。
+
+- 2.提交 [新主页请求](https://github.com/HomePlaza-Of-PCL2/Homepage-Market/issues/new?assignees=&labels=a%3A%E6%96%B0%E4%B8%BB%E9%A1%B5&projects=&template=4_new.yml) 以添加你的主页。在网站第一个正式版发布之后，我们会随之载入。
 
 # 我该在哪里找到主页市场的入口？
 
 - 通常来说，在简单主页“更多”折叠卡片中，你会找到主页市场的入口。当然，在许多其他主页也可能会有主页市场的入口。
 
 - 你也可以直接在 PCL 主页“联网更新”一栏填写主页市场直链，同样可以打开。
+
+- 在最新的 PCL 设置-个性化 之中，主页市场已经被载入预设，可以直接使用。
 
 # 一些提示
 
