@@ -26,7 +26,7 @@ jobs:
       - name: 🛠️ Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16' # 请根据需要选择合适的 Node.js 版本
+          node-version: '22' # 请根据需要选择合适的 Node.js 版本
 
       # 3. 自动初始化 npm 项目
       - name: 📦 Initialize npm project
