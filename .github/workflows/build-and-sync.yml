@@ -34,11 +34,11 @@ jobs:
 
             # 3. 自动初始化 npm 项目
             - name: 📦 Initialize pnpm project
-              run: pnpm init -y
+              run: pnpm init
 
             # 4. 全局安装 uhmlbuilder 包并执行 postinstall
-            - name: ⚙️ Install @mclhomeplaza/uhmlbuilder globally
-              run: pnpm add -g @mclhomeplaza/uhmlbuilder
+            - name: ⚙️ Install @mclhomeplaza/uhml-builder globally
+              run: pnpm add -g @mclhomeplaza/uhml-builder
 
             # 5. 调用 uhmlbuilder 命令进行构建
             - name: 🏗️ Run uhmlbuilder command
