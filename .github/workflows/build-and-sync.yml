@@ -40,6 +40,7 @@ jobs:
             - name: ⚙️ Install @mclhomeplaza/uhml-builder globally
               run: |
                 pnpm setup
+                source /home/runner/.bashrc
                 pnpm add -g @mclhomeplaza/uhml-builder
 
             # 5. 调用 uhmlbuilder 命令进行构建
