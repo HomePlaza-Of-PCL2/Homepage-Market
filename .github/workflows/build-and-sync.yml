@@ -57,6 +57,6 @@ jobs:
             # 9. 替换文件到目标目录 (保持不变)
             - name: 📤 Copy build files to Alist WebDAV
               run: |
-                  mv -f $BUILD_OUTPUT_DIR/Custom.xaml ${{ secrets.LOCAL_PATH }}/Custom.xaml
-                  mv -f $BUILD_OUTPUT_DIR/Custom.xaml.ini ${{ secrets.LOCAL_PATH }}/Custom.xaml.ini
-                  mv -f $BUILD_OUTPUT_DIR/Custom.AST.json ${{ secrets.LOCAL_PATH }}/Custom.AST.json 
+                  echo ${{ secrets.SUDO_PWD }} | sudo -S mv -f $BUILD_OUTPUT_DIR/Custom.xaml ${{ secrets.LOCAL_PATH }}/Custom.xaml
+                  echo ${{ secrets.SUDO_PWD }} | sudo -S mv -f $BUILD_OUTPUT_DIR/Custom.xaml.ini ${{ secrets.LOCAL_PATH }}/Custom.xaml.ini
+                  echo ${{ secrets.SUDO_PWD }} | sudo -S mv -f $BUILD_OUTPUT_DIR/Custom.AST.json ${{ secrets.LOCAL_PATH }}/Custom.AST.json 
