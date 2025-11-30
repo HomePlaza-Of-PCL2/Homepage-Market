@@ -1,0 +1,5 @@
+Style(TargetType="FlowDocumentScrollViewer") {
+    Setter(Property="IsSelectionEnabled", Value="False")
+    Setter(Property="VerticalScrollBarVisibility", Value="Hidden")
+    Setter(Property="Margin", Value="0")
+}

@@ -1,0 +1,6 @@
+Style(TargetType="Paragraph", x:Key="H1") {
+    Setter(Property="FontSize", Value="24")
+    Setter(Property="Margin", Value="0,10,0,10")
+    Setter(Property="FontWeight", Value="Bold")
+    Setter(Property="Foreground", Value="{DynamicResource ColorBrush3}")
+}

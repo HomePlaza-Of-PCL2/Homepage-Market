@@ -1,0 +1,5 @@
+Style(TargetType="local:MyIconTextButton", x:Key="LoadingButton") {
+    Setter(Property="Text", Value="打开主页")
+    Setter(Property="ToolTip", Value="直接加载主页内容并进入")
+    Setter(Property="EventType", Value="打开帮助")
+}

@@ -1,0 +1,6 @@
+Style(TargetType="List") {
+    Setter(Property="Foreground", Value="{DynamicResource ColorBrush3}")
+    Setter(Property="Margin", Value="20,0,0,0")
+    Setter(Property="MarkerStyle", Value=1)
+    Setter(Property="Padding", Value=0)
+}

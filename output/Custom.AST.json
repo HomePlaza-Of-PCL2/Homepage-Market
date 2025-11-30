@@ -1,0 +1,1867 @@
+{
+    "type": "Program",
+    "body": [
+        {
+            "type": "Element",
+            "tagName": "Border",
+            "properties": {
+                "BorderBrush": "{DynamicResource ColorBrush3}",
+                "BorderThickness": 3,
+                "CornerRadius": 8,
+                "Margin": "0,0,0,20"
+            },
+            "children": [
+                {
+                    "type": "Element",
+                    "tagName": "Border.Background",
+                    "properties": {},
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "LinearGradientBrush",
+                            "properties": {
+                                "StartPoint": "0.5,0",
+                                "EndPoint": "0.5,1"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "GradientStop",
+                                    "properties": {
+                                        "Color": "#abdcff",
+                                        "Offset": 0
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "GradientStop",
+                                    "properties": {
+                                        "Color": "#5CBBFF",
+                                        "Offset": 1
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Element",
+                    "tagName": "StackPanel",
+                    "properties": {
+                        "Margin": "0,40,0,0"
+                    },
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {
+                                "HorizontalAlignment": "Center"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "TextBlock",
+                                    "properties": {
+                                        "Text": "欢迎来到 PCL 主页广场",
+                                        "FontSize": 38,
+                                        "Margin": "0,-5,0,20",
+                                        "FontWeight": "Bold",
+                                        "Foreground": "#ffffff"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "TextBlock.Effect",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "DropShadowEffect",
+                                                    "properties": {
+                                                        "Color": "#fff",
+                                                        "Direction": 320,
+                                                        "ShadowDepth": 0,
+                                                        "BlurRadius": 15,
+                                                        "Opacity": 0.5
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {
+                                "HorizontalAlignment": "Center"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "TextBlock",
+                                    "properties": {
+                                        "Text": "这里是所有人的 PCL 主页实验室！",
+                                        "FontSize": 14,
+                                        "Margin": "0,-5,0,20",
+                                        "FontWeight": "Bold",
+                                        "Foreground": "#ffffff",
+                                        "Opacity": 0.75
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "TextBlock.Effect",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "DropShadowEffect",
+                                                    "properties": {
+                                                        "Color": "#fff",
+                                                        "Direction": 320,
+                                                        "ShadowDepth": 0,
+                                                        "BlurRadius": 15,
+                                                        "Opacity": 0.5
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {
+                                "Orientation": "Horizontal",
+                                "HorizontalAlignment": "Center",
+                                "VerticalAlignment": "Bottom"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Image",
+                                    "properties": {
+                                        "Height": 40,
+                                        "Source": "http://image.hhhhhy.kim/45/81.png"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Element",
+            "tagName": "StackPanel",
+            "properties": {
+                "Margin": "0,-10,0,0",
+                "Opacity": "{Binding Path=Value,ElementName=OpacitySlider}"
+            },
+            "children": [
+                {
+                    "type": "Element",
+                    "tagName": "StackPanel.Resources",
+                    "properties": {},
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "FlowDocument"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "FontFamily",
+                                        "Value": "Microsoft YaHei UI"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "FontSize",
+                                        "Value": 14
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "TextAlignment",
+                                        "Value": "Left"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "FlowDocumentScrollViewer"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "IsSelectionEnabled",
+                                        "Value": false
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "VerticalScrollBarVisibility",
+                                        "Value": "Hidden"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Margin",
+                                        "Value": 0
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "TextBlock"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "TextWrapping",
+                                        "Value": "Wrap"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "HorizontalAlignment",
+                                        "Value": "Left"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "FontSize",
+                                        "Value": 14
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Foreground",
+                                        "Value": "Black"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "Paragraph"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Foreground",
+                                        "Value": "{DynamicResource ColorBrush1}"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "local:MyCard",
+                                "x:Key": "Card"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Margin",
+                                        "Value": "0,5"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "StackPanel",
+                                "x:Key": "ContentStack"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Margin",
+                                        "Value": "20,40,20,20"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "Paragraph",
+                                "x:Key": "H1"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "FontSize",
+                                        "Value": 24
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Margin",
+                                        "Value": "0,10,0,10"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "FontWeight",
+                                        "Value": "Bold"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Foreground",
+                                        "Value": "{DynamicResource ColorBrush3}"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "local:MyIconTextButton",
+                                "x:Key": "GithubRepoButton"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Text",
+                                        "Value": "项目仓库"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "ToolTip",
+                                        "Value": "打开项目 Git 源仓库"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "EventType",
+                                        "Value": "打开网页"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "local:MyIconTextButton",
+                                "x:Key": "IssueButton"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Text",
+                                        "Value": "报告问题"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "ToolTip",
+                                        "Value": "向作者反馈问题"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "EventType",
+                                        "Value": "打开网页"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "local:MyIconTextButton",
+                                "x:Key": "ClipboardButton"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Text",
+                                        "Value": "复制直链"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "ToolTip",
+                                        "Value": "复制主页的联网加载链接"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "EventType",
+                                        "Value": "复制文本"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "Style",
+                            "properties": {
+                                "TargetType": "local:MyIconTextButton",
+                                "x:Key": "LoadingButton"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "Text",
+                                        "Value": "打开主页"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "ToolTip",
+                                        "Value": "直接加载主页内容并进入"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Setter",
+                                    "properties": {
+                                        "Property": "EventType",
+                                        "Value": "打开帮助"
+                                    },
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Element",
+                            "tagName": "#__StaticString",
+                            "properties": {},
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "Element",
+                    "tagName": "local:MyCard",
+                    "properties": {
+                        "Title": "Ad_closeNN 的 PCL2 主页",
+                        "CanSwap": true,
+                        "IsSwaped": true,
+                        "Style": "{StaticResource Card}"
+                    },
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {
+                                "Style": "{StaticResource ContentStack}"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "FlowDocumentScrollViewer",
+                                    "properties": {
+                                        "Margin": "0,-5,0,0"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "FlowDocument",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {
+                                                        "Style": "{StaticResource H1}"
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "Ad_closeNN 的 PCL2 主页"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "据本人所描述，这是一个无用主页"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "代码借鉴了 Light Beacon，MFn233，SYBass"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Grid",
+                                    "properties": {},
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "Grid.ColumnDefinitions",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {
+                                                        "Width": "1*"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2",
+                                                "Grid.Column": 0,
+                                                "Orientation": "Horizontal",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource GithubRepoButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource GitIcon}",
+                                                        "EventData": "https://github.com/Ad-closeNN/PCL2-home-page"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource IssueButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource IssueIcon}",
+                                                        "EventData": "https://github.com/Ad-closeNN/PCL2-home-page/issues/new?assignees=&amp;labels=%C2%B7+Bug%2C%E6%96%B0%E5%8F%8D%E9%A6%88&amp;projects=&amp;template=bug9.yml"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource ClipboardButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource ClipboardIcon}",
+                                                        "EventData": "https://raw.gitcode.com/Ad_closeNN/aft/raw/main/Custom.xaml"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource LoadingButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource UseIcon}",
+                                                        "EventData": "https://raw.gitcode.com/Ad_closeNN/aft/raw/main/Custom.json"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2,0,2",
+                                                "Grid.Column": 2,
+                                                "Orientation": "Horizontal",
+                                                "HorizontalAlignment": "Right",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Path",
+                                                    "properties": {
+                                                        "Grid.Column": 0,
+                                                        "Margin": "8,0",
+                                                        "Width": 18,
+                                                        "Height": 18,
+                                                        "Fill": "{DynamicResource ColorBrush4}",
+                                                        "Stretch": "Uniform",
+                                                        "Data": "M853.333333 375.466667C947.2 238.933333 964.266667 51.2 964.266667 42.666667c0-17.066667-8.533333-25.6-25.6-34.133334-17.066667-8.533333-34.133333-8.533333-51.2 0-34.133333 17.066667-332.8 179.2-392.533334 273.066667-85.333333 128-315.733333 477.866667-315.733333 486.4v8.533333L51.2 955.733333c-8.533333 17.066667-8.533333 42.666667 17.066667 51.2 8.533333 0 17.066667 8.533333 25.6 8.533334 17.066667 0 34.133333-8.533333 42.666666-17.066667L256 810.666667c76.8-51.2 503.466667-298.666667 597.333333-435.2zM938.666667 896H307.2c-25.6 0-42.666667 25.6-42.666667 68.266667s17.066667 59.733333 42.666667 59.733333H938.666667c25.6 0 42.666667-25.6 42.666666-68.266667s-17.066667-59.733333-42.666666-59.733333z"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "TextBlock",
+                                                    "properties": {
+                                                        "HorizontalAlignment": "Right",
+                                                        "Grid.Column": 1,
+                                                        "Text": "Ad_closeNN",
+                                                        "FontSize": 14,
+                                                        "VerticalAlignment": "Center",
+                                                        "Foreground": "{DynamicResource ColorBrush4}"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Element",
+                    "tagName": "local:MyCard",
+                    "properties": {
+                        "Title": "炽翎主页",
+                        "CanSwap": true,
+                        "IsSwaped": true,
+                        "Style": "{StaticResource Card}"
+                    },
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {
+                                "Style": "{StaticResource ContentStack}"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "FlowDocumentScrollViewer",
+                                    "properties": {
+                                        "Margin": "0,-5,0,0"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "FlowDocument",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {
+                                                        "Style": "{StaticResource H1}"
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "炽翎主页"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "一个简洁又不失优雅的PCL2主页"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "授权协议：CC BY-NC-SA 4.0"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Grid",
+                                    "properties": {},
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "Grid.ColumnDefinitions",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {
+                                                        "Width": "1*"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2",
+                                                "Grid.Column": 0,
+                                                "Orientation": "Horizontal",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource GithubRepoButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource GitIcon}",
+                                                        "EventData": "https://github.com/YuShanNan/ChiLing-HomePage-PCL2/"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource IssueButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource IssueIcon}",
+                                                        "EventData": "https://github.com/YuShanNan/ChiLing-HomePage-PCL2/issues"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource ClipboardButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource ClipboardIcon}",
+                                                        "EventData": "http://samiuv.mcfuns.cn/PCL2/Custom.xaml"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2,0,2",
+                                                "Grid.Column": 2,
+                                                "Orientation": "Horizontal",
+                                                "HorizontalAlignment": "Right",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Path",
+                                                    "properties": {
+                                                        "Grid.Column": 0,
+                                                        "Margin": "8,0",
+                                                        "Width": 18,
+                                                        "Height": 18,
+                                                        "Fill": "{DynamicResource ColorBrush4}",
+                                                        "Stretch": "Uniform",
+                                                        "Data": "M853.333333 375.466667C947.2 238.933333 964.266667 51.2 964.266667 42.666667c0-17.066667-8.533333-25.6-25.6-34.133334-17.066667-8.533333-34.133333-8.533333-51.2 0-34.133333 17.066667-332.8 179.2-392.533334 273.066667-85.333333 128-315.733333 477.866667-315.733333 486.4v8.533333L51.2 955.733333c-8.533333 17.066667-8.533333 42.666667 17.066667 51.2 8.533333 0 17.066667 8.533333 25.6 8.533334 17.066667 0 34.133333-8.533333 42.666666-17.066667L256 810.666667c76.8-51.2 503.466667-298.666667 597.333333-435.2zM938.666667 896H307.2c-25.6 0-42.666667 25.6-42.666667 68.266667s17.066667 59.733333 42.666667 59.733333H938.666667c25.6 0 42.666667-25.6 42.666666-68.266667s-17.066667-59.733333-42.666666-59.733333z"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "TextBlock",
+                                                    "properties": {
+                                                        "HorizontalAlignment": "Right",
+                                                        "Grid.Column": 1,
+                                                        "Text": "YuShanNan",
+                                                        "FontSize": 14,
+                                                        "VerticalAlignment": "Center",
+                                                        "Foreground": "{DynamicResource ColorBrush4}"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Element",
+                    "tagName": "local:MyCard",
+                    "properties": {
+                        "Title": "SYC",
+                        "CanSwap": true,
+                        "IsSwaped": true,
+                        "Style": "{StaticResource Card}"
+                    },
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {
+                                "Style": "{StaticResource ContentStack}"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "FlowDocumentScrollViewer",
+                                    "properties": {
+                                        "Margin": "0,-5,0,0"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "FlowDocument",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {
+                                                        "Style": "{StaticResource H1}"
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "SYC"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "无法描述具体内容（杠掉）"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Grid",
+                                    "properties": {},
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "Grid.ColumnDefinitions",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {
+                                                        "Width": "1*"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2",
+                                                "Grid.Column": 0,
+                                                "Orientation": "Horizontal",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource GithubRepoButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource GitIcon}",
+                                                        "EventData": "https://github.com/SYBass/SYC/"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource IssueButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource IssueIcon}",
+                                                        "EventData": "https://github.com/SYBass/SYC/issues"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource ClipboardButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource ClipboardIcon}",
+                                                        "EventData": "https://gluvsf.mcfuns.cn/index.html"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2,0,2",
+                                                "Grid.Column": 2,
+                                                "Orientation": "Horizontal",
+                                                "HorizontalAlignment": "Right",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Path",
+                                                    "properties": {
+                                                        "Grid.Column": 0,
+                                                        "Margin": "8,0",
+                                                        "Width": 18,
+                                                        "Height": 18,
+                                                        "Fill": "{DynamicResource ColorBrush4}",
+                                                        "Stretch": "Uniform",
+                                                        "Data": "M853.333333 375.466667C947.2 238.933333 964.266667 51.2 964.266667 42.666667c0-17.066667-8.533333-25.6-25.6-34.133334-17.066667-8.533333-34.133333-8.533333-51.2 0-34.133333 17.066667-332.8 179.2-392.533334 273.066667-85.333333 128-315.733333 477.866667-315.733333 486.4v8.533333L51.2 955.733333c-8.533333 17.066667-8.533333 42.666667 17.066667 51.2 8.533333 0 17.066667 8.533333 25.6 8.533334 17.066667 0 34.133333-8.533333 42.666666-17.066667L256 810.666667c76.8-51.2 503.466667-298.666667 597.333333-435.2zM938.666667 896H307.2c-25.6 0-42.666667 25.6-42.666667 68.266667s17.066667 59.733333 42.666667 59.733333H938.666667c25.6 0 42.666667-25.6 42.666666-68.266667s-17.066667-59.733333-42.666666-59.733333z"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "TextBlock",
+                                                    "properties": {
+                                                        "HorizontalAlignment": "Right",
+                                                        "Grid.Column": 1,
+                                                        "Text": "SYBass",
+                                                        "FontSize": 14,
+                                                        "VerticalAlignment": "Center",
+                                                        "Foreground": "{DynamicResource ColorBrush4}"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Element",
+                    "tagName": "local:MyCard",
+                    "properties": {
+                        "Title": "Magic Box PCL Mainpage",
+                        "CanSwap": true,
+                        "IsSwaped": true,
+                        "Style": "{StaticResource Card}"
+                    },
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {
+                                "Style": "{StaticResource ContentStack}"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "FlowDocumentScrollViewer",
+                                    "properties": {
+                                        "Margin": "0,-5,0,0"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "FlowDocument",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {
+                                                        "Style": "{StaticResource H1}"
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "Magic Box PCL Mainpage"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "FSC 制作的第一个 PCL 主页， 偶尔看到自定义主页之后做的。"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "感谢 Github@MFn233"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Grid",
+                                    "properties": {},
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "Grid.ColumnDefinitions",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {
+                                                        "Width": "1*"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2",
+                                                "Grid.Column": 0,
+                                                "Orientation": "Horizontal",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource ClipboardButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource ClipboardIcon}",
+                                                        "EventData": "http://xxag.top/FSC%20Statics/Misc/MagicBox.xaml"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource LoadingButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource UseIcon}",
+                                                        "EventData": "http://xxag.top/FSC%20Statics/Misc/MagicBox.json"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2,0,2",
+                                                "Grid.Column": 2,
+                                                "Orientation": "Horizontal",
+                                                "HorizontalAlignment": "Right",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Path",
+                                                    "properties": {
+                                                        "Grid.Column": 0,
+                                                        "Margin": "8,0",
+                                                        "Width": 18,
+                                                        "Height": 18,
+                                                        "Fill": "{DynamicResource ColorBrush4}",
+                                                        "Stretch": "Uniform",
+                                                        "Data": "M853.333333 375.466667C947.2 238.933333 964.266667 51.2 964.266667 42.666667c0-17.066667-8.533333-25.6-25.6-34.133334-17.066667-8.533333-34.133333-8.533333-51.2 0-34.133333 17.066667-332.8 179.2-392.533334 273.066667-85.333333 128-315.733333 477.866667-315.733333 486.4v8.533333L51.2 955.733333c-8.533333 17.066667-8.533333 42.666667 17.066667 51.2 8.533333 0 17.066667 8.533333 25.6 8.533334 17.066667 0 34.133333-8.533333 42.666666-17.066667L256 810.666667c76.8-51.2 503.466667-298.666667 597.333333-435.2zM938.666667 896H307.2c-25.6 0-42.666667 25.6-42.666667 68.266667s17.066667 59.733333 42.666667 59.733333H938.666667c25.6 0 42.666667-25.6 42.666666-68.266667s-17.066667-59.733333-42.666666-59.733333z"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "TextBlock",
+                                                    "properties": {
+                                                        "HorizontalAlignment": "Right",
+                                                        "Grid.Column": 1,
+                                                        "Text": "FSC",
+                                                        "FontSize": 14,
+                                                        "VerticalAlignment": "Center",
+                                                        "Foreground": "{DynamicResource ColorBrush4}"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Element",
+                    "tagName": "local:MyCard",
+                    "properties": {
+                        "Title": "SoftOSDev 的主页",
+                        "CanSwap": true,
+                        "IsSwaped": true,
+                        "Style": "{StaticResource Card}"
+                    },
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {
+                                "Style": "{StaticResource ContentStack}"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "FlowDocumentScrollViewer",
+                                    "properties": {
+                                        "Margin": "0,-5,0,0"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "FlowDocument",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {
+                                                        "Style": "{StaticResource H1}"
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "SoftOSDev 的主页"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "❔这个主页很神奇，什么简介都没有……"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Grid",
+                                    "properties": {},
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "Grid.ColumnDefinitions",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {
+                                                        "Width": "1*"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2",
+                                                "Grid.Column": 0,
+                                                "Orientation": "Horizontal",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource ClipboardButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource ClipboardIcon}",
+                                                        "EventData": "https://huaxihao.eu.org/desk/"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2,0,2",
+                                                "Grid.Column": 2,
+                                                "Orientation": "Horizontal",
+                                                "HorizontalAlignment": "Right",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Path",
+                                                    "properties": {
+                                                        "Grid.Column": 0,
+                                                        "Margin": "8,0",
+                                                        "Width": 18,
+                                                        "Height": 18,
+                                                        "Fill": "{DynamicResource ColorBrush4}",
+                                                        "Stretch": "Uniform",
+                                                        "Data": "M853.333333 375.466667C947.2 238.933333 964.266667 51.2 964.266667 42.666667c0-17.066667-8.533333-25.6-25.6-34.133334-17.066667-8.533333-34.133333-8.533333-51.2 0-34.133333 17.066667-332.8 179.2-392.533334 273.066667-85.333333 128-315.733333 477.866667-315.733333 486.4v8.533333L51.2 955.733333c-8.533333 17.066667-8.533333 42.666667 17.066667 51.2 8.533333 0 17.066667 8.533333 25.6 8.533334 17.066667 0 34.133333-8.533333 42.666666-17.066667L256 810.666667c76.8-51.2 503.466667-298.666667 597.333333-435.2zM938.666667 896H307.2c-25.6 0-42.666667 25.6-42.666667 68.266667s17.066667 59.733333 42.666667 59.733333H938.666667c25.6 0 42.666667-25.6 42.666666-68.266667s-17.066667-59.733333-42.666666-59.733333z"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "TextBlock",
+                                                    "properties": {
+                                                        "HorizontalAlignment": "Right",
+                                                        "Grid.Column": 1,
+                                                        "Text": "SoftOSDev",
+                                                        "FontSize": 14,
+                                                        "VerticalAlignment": "Center",
+                                                        "Foreground": "{DynamicResource ColorBrush4}"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Element",
+                    "tagName": "local:MyCard",
+                    "properties": {
+                        "Title": "PCL2更新日志-预览版",
+                        "CanSwap": true,
+                        "IsSwaped": true,
+                        "Style": "{StaticResource Card}"
+                    },
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {
+                                "Style": "{StaticResource ContentStack}"
+                            },
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "FlowDocumentScrollViewer",
+                                    "properties": {
+                                        "Margin": "0,-5,0,0"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "FlowDocument",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {
+                                                        "Style": "{StaticResource H1}"
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "PCL2更新日志-预览版"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "# 一个...PCL2更新日志（！"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Paragraph",
+                                                    "properties": {},
+                                                    "children": [
+                                                        {
+                                                            "type": "Text",
+                                                            "value": "要不...乱点点测测Bug？"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Element",
+                                    "tagName": "Grid",
+                                    "properties": {},
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "Grid.ColumnDefinitions",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {
+                                                        "Width": "1*"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "ColumnDefinition",
+                                                    "properties": {},
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2",
+                                                "Grid.Column": 0,
+                                                "Orientation": "Horizontal",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource GithubRepoButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource GitIcon}",
+                                                        "EventData": "https://github.com/Joker2184/UpdateHomepage/"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource IssueButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource IssueIcon}",
+                                                        "EventData": "https://github.com/Joker2184/UpdateHomepage/issues"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "Style": "{StaticResource ClipboardButton}",
+                                                        "LogoScale": 0.85,
+                                                        "Logo": "{StaticResource ClipboardIcon}",
+                                                        "EventData": "https://updatehomepage.pages.dev/UpdateHomepageTest.xaml"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "WrapPanel",
+                                            "properties": {
+                                                "Margin": "-2,2,0,2",
+                                                "Grid.Column": 2,
+                                                "Orientation": "Horizontal",
+                                                "HorizontalAlignment": "Right",
+                                                "VerticalAlignment": "Center"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "Path",
+                                                    "properties": {
+                                                        "Grid.Column": 0,
+                                                        "Margin": "8,0",
+                                                        "Width": 18,
+                                                        "Height": 18,
+                                                        "Fill": "{DynamicResource ColorBrush4}",
+                                                        "Stretch": "Uniform",
+                                                        "Data": "M853.333333 375.466667C947.2 238.933333 964.266667 51.2 964.266667 42.666667c0-17.066667-8.533333-25.6-25.6-34.133334-17.066667-8.533333-34.133333-8.533333-51.2 0-34.133333 17.066667-332.8 179.2-392.533334 273.066667-85.333333 128-315.733333 477.866667-315.733333 486.4v8.533333L51.2 955.733333c-8.533333 17.066667-8.533333 42.666667 17.066667 51.2 8.533333 0 17.066667 8.533333 25.6 8.533334 17.066667 0 34.133333-8.533333 42.666666-17.066667L256 810.666667c76.8-51.2 503.466667-298.666667 597.333333-435.2zM938.666667 896H307.2c-25.6 0-42.666667 25.6-42.666667 68.266667s17.066667 59.733333 42.666667 59.733333H938.666667c25.6 0 42.666667-25.6 42.666666-68.266667s-17.066667-59.733333-42.666666-59.733333z"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "TextBlock",
+                                                    "properties": {
+                                                        "HorizontalAlignment": "Right",
+                                                        "Grid.Column": 1,
+                                                        "Text": "Joker2184",
+                                                        "FontSize": 14,
+                                                        "VerticalAlignment": "Center",
+                                                        "Foreground": "{DynamicResource ColorBrush4}"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Element",
+            "tagName": "local:MyCard",
+            "properties": {
+                "Margin": "0,10,0,14"
+            },
+            "children": [
+                {
+                    "type": "Element",
+                    "tagName": "Border",
+                    "properties": {
+                        "BorderBrush": "{DynamicResource ColorBrush2}",
+                        "Margin": -0.6,
+                        "CornerRadius": 5,
+                        "BorderThickness": "0,0,0,10"
+                    },
+                    "children": [
+                        {
+                            "type": "Element",
+                            "tagName": "StackPanel",
+                            "properties": {},
+                            "children": [
+                                {
+                                    "type": "Element",
+                                    "tagName": "Grid",
+                                    "properties": {
+                                        "Margin": "26,20,20,2"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "Element",
+                                            "tagName": "StackPanel",
+                                            "properties": {},
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "StackPanel",
+                                                    "properties": {
+                                                        "Orientation": "Horizontal",
+                                                        "VerticalAlignment": "Center",
+                                                        "Margin": "0,0,0,4"
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "type": "Element",
+                                                            "tagName": "TextBlock",
+                                                            "properties": {
+                                                                "FontSize": 18,
+                                                                "Foreground": "{DynamicResource ColorBrush2}"
+                                                            },
+                                                            "children": [
+                                                                {
+                                                                    "type": "Element",
+                                                                    "tagName": "Bold",
+                                                                    "properties": {},
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "Element",
+                                                                            "tagName": "Run",
+                                                                            "properties": {
+                                                                                "Text": "PCL2 主页广场"
+                                                                            },
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "StackPanel",
+                                                    "properties": {
+                                                        "Orientation": "Horizontal",
+                                                        "VerticalAlignment": "Center",
+                                                        "Margin": "-4,0,0,10",
+                                                        "Height": 48
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "type": "Element",
+                                                            "tagName": "Image",
+                                                            "properties": {
+                                                                "Margin": 2,
+                                                                "Source": "https://s3.bmp.ovh/imgs/2024/08/18/5454ae7566fc802d.png"
+                                                            },
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "type": "Element",
+                                                            "tagName": "Image",
+                                                            "properties": {
+                                                                "Margin": 2,
+                                                                "Source": "https://s3.bmp.ovh/imgs/2024/08/18/db681f5ee25b47c7.png"
+                                                            },
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "StackPanel",
+                                                    "properties": {
+                                                        "Orientation": "Horizontal",
+                                                        "VerticalAlignment": "Center",
+                                                        "Margin": "-8,0,0,10"
+                                                    },
+                                                    "children": [
+                                                        {
+                                                            "type": "Element",
+                                                            "tagName": "local:MyIconTextButton",
+                                                            "properties": {
+                                                                "HorizontalAlignment": "Left",
+                                                                "Text": "GitHub",
+                                                                "ToolTip": "前往主页广场 GitHub 页面",
+                                                                "EventType": "打开网页",
+                                                                "EventData": "https://github.com/HomePlaza-Of-PCL2/Homepage.Market",
+                                                                "LogoScale": 1,
+                                                                "Logo": "M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667"
+                                                            },
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "type": "Element",
+                                                            "tagName": "local:MyIconTextButton",
+                                                            "properties": {
+                                                                "Text": "WTFPL license",
+                                                                "ToolTip": "无特殊声明本主页文字内容使用该授权协议",
+                                                                "EventType": "打开网页",
+                                                                "EventData": "http://www.wtfpl.net/",
+                                                                "LogoScale": 1,
+                                                                "Logo": "M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z"
+                                                            },
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "type": "Element",
+                                                            "tagName": "local:MyIconTextButton",
+                                                            "properties": {
+                                                                "Text": "鸣谢",
+                                                                "ToolTip": "感谢为本项目提供了技术支持的人",
+                                                                "EventType": "弹出窗口",
+                                                                "EventData": "鸣谢|在此感谢为主页广场提供了技术支持的人\\n名称使用“昵称 @GitHub用户名”的形式标注\\n\\n鸣谢列表：\\n 最亮的信标 @Light-Beacon\\n     · 借鉴使用了部分样式代码\\n 雨杉楠 @YuShanNan\\n     · 从其主页中获得了早期 UI 灵感",
+                                                                "LogoScale": 1,
+                                                                "Logo": "M330.688 192c41.152 0 74.624 33.536 74.624 74.688V352a32 32 0 1 0 64.064 0V266.688a138.88 138.88 0 0 0-138.688-138.752 32 32 0 1 0 0 64.128z m225.792 279.232a32 32 0 0 1-22.656-54.72c23.808-23.808 50.752-22.656 66.816-22.016 13.888 0.64 15.424 0.128 18.816-3.2 3.328-3.392 3.84-4.928 3.2-18.752-0.64-16.064-1.92-43.008 21.952-66.816 23.808-23.808 50.752-22.656 66.816-22.016 13.888 0.64 15.424 0.128 18.816-3.2 3.392-3.456 3.84-4.992 3.328-18.944-0.64-16.064-1.792-43.008 22.08-66.816 23.808-23.872 50.752-22.72 66.816-22.08 13.952 0.576 15.488 0.064 18.88-3.328a32 32 0 0 1 45.312 45.312c-23.808 23.808-50.752 22.72-66.816 22.08-13.952-0.64-15.488-0.064-18.88 3.328-3.392 3.392-3.904 4.928-3.328 18.88 0.64 16.064 1.728 43.008-22.08 66.816s-50.752 22.72-66.816 22.016c-13.888-0.576-15.424-0.064-18.816 3.328-3.328 3.328-3.84 4.864-3.2 18.688 0.64 16.064 1.856 43.008-21.952 66.816-23.808 23.808-50.752 22.656-66.816 21.952-13.888-0.64-15.424-0.064-18.752 3.264a32 32 0 0 1-22.72 9.408zM512.64 208.896a31.808 31.808 0 0 0 13.632 20.48 32 32 0 0 0 46.08-11.584 36.096 36.096 0 0 0 3.2-8.896 31.616 31.616 0 0 0-13.696-32.896 27.648 27.648 0 0 0-8.448-3.968 31.68 31.68 0 0 0-37.568 15.552 35.712 35.712 0 0 0-3.2 8.832 31.104 31.104 0 0 0 0 12.48zM302.08 384.832c10.752-2.56 22.144 0.64 30.016 8.512l298.624 298.688a32 32 0 0 1-12.48 53.056l-448 149.312a32 32 0 0 1-40.576-40.512l149.312-448a32 32 0 0 1 23.04-21.12z m591.552 82.944a29.76 29.76 0 0 1 2.496 12.16 32.192 32.192 0 0 1-16.96 28.352A33.024 33.024 0 0 1 864 512a32.512 32.512 0 0 1-20.288-7.296 27.264 27.264 0 0 1-4.48-4.48 30.464 30.464 0 0 1-5.888-10.944 31.744 31.744 0 0 1 24.384-40.768 31.68 31.68 0 0 1 35.84 19.2z m-570.24 7.552l-112.64 337.984 337.984-112.64-225.28-225.28z m433.984 79.296H672a32 32 0 1 0 0 64.064h85.312c41.152 0 74.624 33.472 74.624 74.624a32 32 0 1 0 64.128 0 138.88 138.88 0 0 0-138.752-138.688z"
+                                                            },
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Element",
+                                            "tagName": "StackPanel",
+                                            "properties": {
+                                                "HorizontalAlignment": "Right"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "HorizontalAlignment": "Left",
+                                                        "ToolTip": "反馈主页广场问题",
+                                                        "Text": "反馈",
+                                                        "EventType": "打开网页",
+                                                        "EventData": "https://github.com/HomePlaza-Of-PCL2/Homepage.Market/issues/new/choose",
+                                                        "LogoScale": 1,
+                                                        "Logo": "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "HorizontalAlignment": "Left",
+                                                        "ToolTip": "投稿你制作了但是没选上的主页",
+                                                        "Text": "投稿",
+                                                        "EventType": "打开网页",
+                                                        "EventData": "https://github.com/HomePlaza-Of-PCL2/Homepage.Market/issues/new?assignees=&amp;labels=a%3A%E6%96%B0%E4%B8%BB%E9%A1%B5&amp;projects=&amp;template=4_new.yml",
+                                                        "LogoScale": 1,
+                                                        "Logo": "M464.5888 584.3456a25.088 25.088 0 0 1-17.7664-42.8032l377.1904-377.1904a25.088 25.088 0 0 1 35.4816 35.4816L482.304 577.024a24.9856 24.9856 0 0 1-17.7152 7.3216z m165.2736 337.1008a25.088 25.088 0 0 1-22.6304-14.2336l-153.7024-321.536L116.224 416.3584a25.088 25.088 0 0 1 3.328-46.2336l753.0496-250.6752a25.088 25.088 0 1 1 31.7952 31.744L653.7216 904.192a25.088 25.088 0 0 1-22.2208 17.1008c-0.6144 0.1024-1.1264 0.1024-1.6384 0.1024zM192.8192 398.6432l290.816 146.0224a25.2416 25.2416 0 0 1 11.4176 11.6224l130.56 273.152 215.296-646.5024L192.8192 398.6432z m192.768 393.728a25.088 25.088 0 0 1-24.576-30.0544l39.4752-197.376a25.088 25.088 0 1 1 49.2032 9.8304l-27.648 137.8816 67.9936-45.2608a25.088 25.088 0 0 1 27.8528 41.7792l-118.4256 78.8992a24.7296 24.7296 0 0 1-13.8752 4.2496z"
+                                                    },
+                                                    "children": []
+                                                },
+                                                {
+                                                    "type": "Element",
+                                                    "tagName": "local:MyIconTextButton",
+                                                    "properties": {
+                                                        "HorizontalAlignment": "Left",
+                                                        "Text": "刷新",
+                                                        "ToolTip": "刷新主页广场",
+                                                        "EventType": "刷新主页",
+                                                        "LogoScale": 0.9,
+                                                        "Logo": "M960 416V192l-73.056 73.056a447.712 447.712 0 0 0-373.6-201.088C265.92 63.968 65.312 264.544 65.312 512S265.92 960.032 513.344 960.032a448.064 448.064 0 0 0 415.232-279.488 38.368 38.368 0 1 0-71.136-28.896 371.36 371.36 0 0 1-344.096 231.584C308.32 883.232 142.112 717.024 142.112 512S308.32 140.768 513.344 140.768c132.448 0 251.936 70.08 318.016 179.84L736 416h224z"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

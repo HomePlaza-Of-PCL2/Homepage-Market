@@ -1,0 +1,5 @@
+Style(TargetType="local:MyIconTextButton", x:Key="ClipboardButton") {
+    Setter(Property="Text", Value="复制直链")
+    Setter(Property="ToolTip", Value="复制主页的联网加载链接")
+    Setter(Property="EventType", Value="复制文本")
+}

@@ -1,0 +1,6 @@
+Style(TargetType="Border", x:Key="Quote") {
+    Setter(Property="BorderThickness", Value="5,0,0,0")
+    Setter(Property="BorderBrush", Value="{DynamicResource ColorBrush4}")
+    Setter(Property="Padding", Value="10,5")
+    Setter(Property="Margin", Value="0,5")
+}

@@ -1,0 +1,4 @@
+Style(TargetType="Image", x:Key="InnerImage") {
+    Setter(Property="MaxHeight", Value="500")
+    Setter(Property="HorizontalAlignment", Value="Center")
+}

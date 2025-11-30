@@ -1,0 +1,4 @@
+Style(TargetType="Run", x:Key="H1") {
+    Setter(Property="FontSize", Value="24")
+    Setter(Property="FontWeight", Value="Bold")
+}

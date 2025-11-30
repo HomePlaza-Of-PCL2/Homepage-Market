@@ -1,0 +1,5 @@
+Style(TargetType="local:MyIconTextButton", x:Key="GithubRepoButton") {
+    Setter(Property="Text", Value="项目仓库")
+    Setter(Property="ToolTip", Value="打开项目 Git 源仓库")
+    Setter(Property="EventType", Value="打开网页")
+}

@@ -1,0 +1,5 @@
+Style(TargetType="FlowDocument") {
+    Setter(Property="FontFamily", Value="Microsoft YaHei UI")
+    Setter(Property="FontSize", Value="14")
+    Setter(Property="TextAlignment", Value="Left")
+}

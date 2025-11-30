@@ -1,0 +1,6 @@
+Style(TargetType="TextBlock") {
+    Setter(Property="TextWrapping", Value="Wrap")
+    Setter(Property="HorizontalAlignment", Value="Left")
+    Setter(Property="FontSize", Value="14")
+    Setter(Property="Foreground", Value="Black")
+}

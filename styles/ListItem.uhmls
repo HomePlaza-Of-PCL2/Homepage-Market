@@ -1,0 +1,4 @@
+Style(TargetType="ListItem") {
+    Setter(Property="Foreground", Value="Black")
+    Setter(Property="LineHeight", Value="22")
+}
