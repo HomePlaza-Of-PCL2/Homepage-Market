@@ -54,11 +54,6 @@ jobs:
 
             # --- rclone 配置和同步步骤 (保持不变) ---
 
-            # 7. 安装 rclone (保持不变)
-            - name: 🚀 Install rclone
-              run: |
-                  echo "${{ secrets.SUDO_PWD }}" | sudo -S bash -c "curl -sL https://rclone.org/install.sh | bash"
-
             # 8. 配置 rclone for WebDAV (Alist) (保持不变)
             - name: ⚙️ Configure rclone for WebDAV (Alist)
               run: |
