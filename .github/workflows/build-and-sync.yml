@@ -12,61 +12,69 @@ env:
 
 jobs:
     build_and_sync:
-        # 始终在最新的 Ubuntu Runner 上运行
         runs-on: ubuntu-latest
 
         # 确保 secrets.WEBDAV_HOST 等 WebDAV 相关的 secrets 在您的仓库中已配置
 
         steps:
-            # 1. 检出仓库代码
+            # 1. 检出仓库代码 (使用 actions/checkout@v4 最新版本)
             - name: ⚙️ Checkout repository
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
 
-            # 2. 设置 Node.js 环境
-            - name: 🛠️ Set up Node.js
-              uses: actions/setup-node@v2
+            # 2. 设置 Node.js 环境 (使用 actions/setup-node@v4 最新版本)
+            #    同时启用 pnpm 缓存
+            - name: 🟢 Setup Node.js & Cache
+              uses: actions/setup-node@v4
               with:
                   node-version: "22" # 请根据需要选择合适的 Node.js 版本
+                  cache: "pnpm" # 启用 pnpm 依赖缓存
 
-            # 设置 pnpm
-            - name: 📦 Install pnpm
-              run: npm install -g pnpm
+            # 3. 设置 pnpm (使用 pnpm/action-setup@v3)
+            #    这会取代你手动执行的 'npm install -g pnpm' 和 'pnpm setup'
+            - name: 📦 Setup pnpm environment
+              uses: pnpm/action-setup@v3
+              with:
+                  version: 8 # 指定 pnpm 版本
+                  # 不需要 run_install, 因为你的代码中没有依赖安装步骤，只有全局安装
 
-            # 3. 自动初始化 npm 项目
+            # 4. 初始化 npm/pnpm 项目 (如果需要 package.json)
+            #    注意：如果你的仓库中已经有 package.json，请删除此步骤。
             - name: 📦 Initialize pnpm project
               run: pnpm init
 
-            # 4. 全局安装 uhmlbuilder 包并执行 postinstall
-            - name: ⚙️ Install @mclhomeplaza/uhml-builder globally
+            # 5. 全局安装 uhmlbuilder 包并运行构建命令
+            #    注意：我们假设包安装后会自动触发 postinstall 或你需要运行 uhmlbuilder
+            - name: ⚙️🏗️ Install & Build
               run: |
-                pnpm setup
-                source /home/runner/.bashrc
-                pnpm add -g @mclhomeplaza/uhml-builder
+                  # pnpm add -g 路径已经由 pnpm/action-setup 处理，无需 source
+                  pnpm add -g @mclhomeplaza/uhml-builder
 
-            # 5. 调用 uhmlbuilder 命令进行构建
-            - name: 🏗️ Run uhmlbuilder command
-              # 假设 uhmlbuilder 是一个全局可用的命令
-              # 您可能需要根据您的项目结构和 uhmlbuilder 的实际用法调整此命令
-              run: uhmlbuilder
+                  # 执行构建命令 (根据你的上下文，这可能是安装包的 CLI 命令)
+                  uhmlbuilder
 
             # 6. 确认构建输出文件是否存在 (调试和检查)
             - name: 🔍 Check build output files
               run: |
                   echo "Listing contents of $BUILD_OUTPUT_DIR:"
+                  # 检查目录是否存在，不存在则创建（可选）
+                  if [ ! -d "$BUILD_OUTPUT_DIR" ]; then
+                    echo "Error: Build output directory $BUILD_OUTPUT_DIR not found!"
+                    exit 1
+                  fi
                   ls -l $BUILD_OUTPUT_DIR/
                   if [ ! -f $BUILD_OUTPUT_DIR/Custom.xaml ]; then
                     echo "Error: output/Custom.xaml not found!"
                     exit 1
                   fi
 
-            # --- rclone 配置和同步步骤 (基于您提供的原有工作流) ---
+            # --- rclone 配置和同步步骤 (保持不变) ---
 
-            # 7. 安装 rclone
+            # 7. 安装 rclone (保持不变)
             - name: 🚀 Install rclone
               run: |
                   curl https://rclone.org/install.sh | sudo bash
 
-            # 8. 配置 rclone for WebDAV
+            # 8. 配置 rclone for WebDAV (Alist) (保持不变)
             - name: ⚙️ Configure rclone for WebDAV (Alist)
               run: |
                   # 请注意，/dav 是 Alist WebDAV 的默认路径，如果您的配置不同请修改
@@ -75,19 +83,14 @@ jobs:
                     user ${{ secrets.ALIST_USERNAME }} \
                     pass ${{ secrets.ALIST_PASSWORD }}
 
-            # 9. 替换文件到目标目录
-            # 使用 rclone copy/sync 将指定的三个文件复制到 WebDAV 根目录 (或您需要的目录)
+            # 9. 替换文件到目标目录 (保持不变)
             - name: 📤 Copy build files to Alist WebDAV
               run: |
-                  # 假设您希望将这三个文件直接放在 WebDAV 的根目录下
-                  # 将 output/Custom.xaml 复制到 alist_webdav:/Custom.xaml
                   rclone copy $BUILD_OUTPUT_DIR/Custom.xaml alist_webdav:/ --checksum --size-only --retries 3
-                  # 将 output/Custom.xaml.ini 复制到 alist_webdav:/Custom.xaml.ini
                   rclone copy $BUILD_OUTPUT_DIR/Custom.xaml.ini alist_webdav:/ --checksum --size-only --retries 3
-                  # 将 output/Custom.AST.json 复制到 alist_webdav:/Custom.AST.json
                   rclone copy $BUILD_OUTPUT_DIR/Custom.AST.json alist_webdav:/ --checksum --size-only --retries 3
 
-            # 10. 清理 rclone 配置
+            # 10. 清理 rclone 配置 (保持不变)
             - name: 🧹 Clean up rclone config
-              if: always() # 确保即使前面的步骤失败也执行
+              if: always()
               run: rm -rf ~/.config/rclone
