@@ -38,7 +38,9 @@ jobs:
 
             # 4. 全局安装 uhmlbuilder 包并执行 postinstall
             - name: ⚙️ Install @mclhomeplaza/uhml-builder globally
-              run: pnpm add -g @mclhomeplaza/uhml-builder
+              run: |
+                pnpm setup
+                pnpm add -g @mclhomeplaza/uhml-builder
 
             # 5. 调用 uhmlbuilder 命令进行构建
             - name: 🏗️ Run uhmlbuilder command
