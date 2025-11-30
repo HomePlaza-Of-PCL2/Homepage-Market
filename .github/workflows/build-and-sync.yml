@@ -54,23 +54,9 @@ jobs:
 
             # --- rclone 配置和同步步骤 (保持不变) ---
 
-            # 8. 配置 rclone for WebDAV (Alist) (保持不变)
-            - name: ⚙️ Configure rclone for WebDAV (Alist)
-              run: |
-                  # 请注意，/dav 是 Alist WebDAV 的默认路径，如果您的配置不同请修改
-                  rclone config create alist_webdav webdav \
-                    url http://${{ secrets.WEBDAV_HOST }}:${{ secrets.WEBDAV_PORT }}/dav \
-                    user ${{ secrets.ALIST_USERNAME }} \
-                    pass ${{ secrets.ALIST_PASSWORD }}
-
             # 9. 替换文件到目标目录 (保持不变)
             - name: 📤 Copy build files to Alist WebDAV
               run: |
-                  rclone copy $BUILD_OUTPUT_DIR/Custom.xaml alist_webdav:/ --checksum --size-only --retries 3
-                  rclone copy $BUILD_OUTPUT_DIR/Custom.xaml.ini alist_webdav:/ --checksum --size-only --retries 3
-                  rclone copy $BUILD_OUTPUT_DIR/Custom.AST.json alist_webdav:/ --checksum --size-only --retries 3
-
-            # 10. 清理 rclone 配置 (保持不变)
-            - name: 🧹 Clean up rclone config
-              if: always()
-              run: rm -rf ~/.config/rclone
+                  mv -f $BUILD_OUTPUT_DIR/Custom.xaml ${{ secrets.LOCAL_PATH }}/Custom.xaml
+                  mv -f $BUILD_OUTPUT_DIR/Custom.xaml.ini ${{ secrets.LOCAL_PATH }}/Custom.xaml.ini
+                  mv -f $BUILD_OUTPUT_DIR/Custom.AST.json ${{ secrets.LOCAL_PATH }}/Custom.AST.json 
