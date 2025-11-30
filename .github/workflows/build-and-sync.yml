@@ -20,8 +20,8 @@ jobs:
             # 1. 检出仓库代码 (使用 actions/checkout@v4 最新版本)
             - name: ⚙️ Checkout repository
               uses: actions/checkout@v4
-              with: 
-                github-server-url: "https://hk.gh-proxy.org/https://github.com/"
+              # with: 
+               # github-server-url: "https://hk.gh-proxy.org/https://github.com/"
 
             # # 2. 设置 Node.js 环境 (使用 actions/setup-node@v4 最新版本)
             # #    同时启用 pnpm 缓存
