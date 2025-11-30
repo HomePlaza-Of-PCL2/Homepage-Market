@@ -50,21 +50,6 @@ jobs:
                   # 执行构建命令 (根据你的上下文，这可能是安装包的 CLI 命令)
                   uhmlbuilder
 
-            # 6. 确认构建输出文件是否存在 (调试和检查)
-            - name: 🔍 Check build output files
-              run: |
-                  echo "Listing contents of $BUILD_OUTPUT_DIR:"
-                  # 检查目录是否存在，不存在则创建（可选）
-                  if [ ! -d "$BUILD_OUTPUT_DIR" ]; then
-                    echo "Error: Build output directory $BUILD_OUTPUT_DIR not found!"
-                    exit 1
-                  fi
-                  ls -l $BUILD_OUTPUT_DIR/
-                  if [ ! -f $BUILD_OUTPUT_DIR/Custom.xaml ]; then
-                    echo "Error: output/Custom.xaml not found!"
-                    exit 1
-                  fi
-
             # --- rclone 配置和同步步骤 (保持不变) ---
 
             # 7. 安装 rclone (保持不变)
