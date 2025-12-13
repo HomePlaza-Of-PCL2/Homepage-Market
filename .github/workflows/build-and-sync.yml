@@ -12,7 +12,7 @@ env:
 
 jobs:
     build_and_sync:
-        runs-on: hposs-self-hosted
+        runs-on: ubuntu-latest
 
         # 确保 secrets.WEBDAV_HOST 等 WebDAV 相关的 secrets 在您的仓库中已配置
 
@@ -20,8 +20,6 @@ jobs:
             # 1. 检出仓库代码 (使用 actions/checkout@v4 最新版本)
             - name: ⚙️ Checkout repository
               uses: actions/checkout@v4
-              # with: 
-               # github-server-url: "https://hk.gh-proxy.org/https://github.com/"
 
             # # 2. 设置 Node.js 环境 (使用 actions/setup-node@v4 最新版本)
             # #    同时启用 pnpm 缓存
@@ -44,7 +42,9 @@ jobs:
             - name: 📦 Initialize pnpm project
               run: pnpm init
 
-            - name: 🏗️ Build
+            # 5. 全局安装 uhmlbuilder 包并运行构建命令
+            #    注意：我们假设包安装后会自动触发 postinstall 或你需要运行 uhmlbuilder
+            - name: ⚙️🏗️ Install & Build
               run: |
                   # pnpm add -g 路径已经由 pnpm/action-setup 处理，无需 source
                   pnpm add -g @mclhomeplaza/uhml-builder
@@ -52,11 +52,45 @@ jobs:
                   # 执行构建命令 (根据你的上下文，这可能是安装包的 CLI 命令)
                   uhmlbuilder
 
+            # 6. 确认构建输出文件是否存在 (调试和检查)
+            - name: 🔍 Check build output files
+              run: |
+                  echo "Listing contents of $BUILD_OUTPUT_DIR:"
+                  # 检查目录是否存在，不存在则创建（可选）
+                  if [ ! -d "$BUILD_OUTPUT_DIR" ]; then
+                    echo "Error: Build output directory $BUILD_OUTPUT_DIR not found!"
+                    exit 1
+                  fi
+                  ls -l $BUILD_OUTPUT_DIR/
+                  if [ ! -f $BUILD_OUTPUT_DIR/Custom.xaml ]; then
+                    echo "Error: output/Custom.xaml not found!"
+                    exit 1
+                  fi
+
             # --- rclone 配置和同步步骤 (保持不变) ---
+
+            # 7. 安装 rclone (保持不变)
+            - name: 🚀 Install rclone
+              run: |
+                  curl https://rclone.org/install.sh | sudo bash
+
+            # 8. 配置 rclone for WebDAV (Alist) (保持不变)
+            - name: ⚙️ Configure rclone for WebDAV (Alist)
+              run: |
+                  # 请注意，/dav 是 Alist WebDAV 的默认路径，如果您的配置不同请修改
+                  rclone config create alist_webdav webdav \
+                    url https://${{ secrets.WEBDAV_HOST }}:${{ secrets.WEBDAV_PORT }}/dav \
+                    user ${{ secrets.ALIST_USERNAME }} \
+                    pass ${{ secrets.ALIST_PASSWORD }}
 
             # 9. 替换文件到目标目录 (保持不变)
             - name: 📤 Copy build files to Alist WebDAV
               run: |
-                  mv -f $BUILD_OUTPUT_DIR/Custom.xaml ${{ secrets.LOCAL_PATH }}/Custom.xaml
-                  mv -f $BUILD_OUTPUT_DIR/Custom.xaml.ini ${{ secrets.LOCAL_PATH }}/Custom.xaml.ini
-                  mv -f $BUILD_OUTPUT_DIR/Custom.AST.json ${{ secrets.LOCAL_PATH }}/Custom.AST.json 
+                  rclone copy $BUILD_OUTPUT_DIR/Custom.xaml alist_webdav:/ --checksum --size-only --retries 3
+                  rclone copy $BUILD_OUTPUT_DIR/Custom.xaml.ini alist_webdav:/ --checksum --size-only --retries 3
+                  rclone copy $BUILD_OUTPUT_DIR/Custom.AST.json alist_webdav:/ --checksum --size-only --retries 3
+
+            # 10. 清理 rclone 配置 (保持不变)
+            - name: 🧹 Clean up rclone config
+              if: always()
+              run: rm -rf ~/.config/rclone
