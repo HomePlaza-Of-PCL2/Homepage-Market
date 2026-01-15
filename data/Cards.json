@@ -50,14 +50,14 @@
         "Title": "关于我懒得翻了所以把所有版本都放到主页一键启动那回事",
         "Descriptions": [
             "批处理文件地址：raw.gitcode.com/Mufeng_Qian/PCL_HomepageUpdate/raw/main/HomepageUpdate.bat",
-            "",
+            " ",
             "把这个批处理文件放到Custom.xaml所在文件夹运行一次后刷新主页即可，后面就可以直接在主页刷新了",
-            "",
+            " ",
             "红色是forge，蓝色是fabric",
-            "",
+            " ",
             "注意：所有的版本命名需改成\"版本号_fabric/forge_想要显示的名称\"，否则会被归类到“其他",
             "例如\"1.18.2_fabric_main\" 或者\"1.21.1_forge_create_v2\"",
-            "",
+            " ",
             "gpt生成的，不过很管用"
         ],
         "ClipboardLink": "https://raw.gitcode.com/Mufeng_Qian/PCL_HomepageUpdate/raw/main/Custom.xaml"
